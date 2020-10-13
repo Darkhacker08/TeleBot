@@ -57,16 +57,16 @@ async def amireallyalive(alive):
     ms = (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
     if ALV_PIC:
-        tele = f"**Welcome To TeleBot **\n\n"
+        tele = f"**Welcome To AlviBot **\n\n"
         tele += "`Hey! I'm alive. All systems online and functioning normally!`\n\n"
         tele += "` 🔸 Telethon version:` **1.16.4**\n` 🔹 Python:` **3.8.3**\n"
-        tele += f"` 🔸 TeleBot Version:` **{telever}**\n"
-        tele += "` 🔹 More Info:` **@TeleBotSupport**\n"
+        tele += f"` 🔸 Alvibot Version:` **{telever}**\n"
+        tele += "` 🔹 More Info:` **@indusbots**\n"
         tele += f"` 🔸 Sudo :` **{sudo}**\n"
         tele += f"` 🔹 TeleBot Uptime:` **{uptime}**\n"
         tele += "` 🔸 Database Status:` **All OK 👌!**\n"
         tele += f"` 🔹 My pro owner` : **[{DEFAULTUSER}](tg://user?id={myid})**\n\n"
-        tele += "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)"
+       
 
         chat = await alive.get_chat()
         await alive.delete()
@@ -83,15 +83,14 @@ async def amireallyalive(alive):
         img.save(sticker, "webp")
         sticker.name = "sticker.webp"
         sticker.seek(0)
-        await borg.send_message(alive.chat_id, f"**Welcome To TeleBot **\n\n"
+        await borg.send_message(alive.chat_id, f"**Welcome To Alvibot **\n\n"
                 "`Hey! I'm alive. All systems online and functioning normally!`\n\n"
                 "` 🔸 Telethon version:` **1.16.4**\n` 🔹 Python:` **3.8.3**\n"
-                f"` 🔸 TeleBot Version:` **{telever}**\n"
+                f"` 🔸 AlviBot Version:` **{telever}**\n"
                 "` 🔹 More Info:` **@TeleBotSupport**\n"
                 f"` 🔸 Sudo :` **{sudo}**\n"
-                f"` 🔹 TeleBot Uptime:` **{uptime}**\n"
+                f"` 🔹 Alvibot Uptime:` **{uptime}**\n"
                 "` 🔸 Database Status:` **All OK 👌!**\n"
-                f"` 🔹 My pro owner` : **[{DEFAULTUSER}](tg://user?id={myid})**\n\n"
-                "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)", link_preview = False)
+                f"` 🔹 My pro owner` : **[{DEFAULTUSER}](tg://user?id={myid})**\n\n\n
         await borg.send_file(alive.chat_id, file=sticker) 
         await alive.delete()
